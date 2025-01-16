@@ -1,6 +1,9 @@
+use std::io;
+
 fn main() {
     numeric();
     compounds();
+    index_error();
 }
 
 fn numeric() {
@@ -33,4 +36,25 @@ fn compounds() {
     let first = arr[0];
     let last = arr[arr.len() -1];
     println!("arr = [3;10], arr[0] = {first}, arr[-1] = {last}");
+}
+
+fn index_error() {
+    let a = [1, 2, 3, 4, 5];
+
+    println!("Please enter an array index.");
+
+    let mut index = String::new();
+
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+
+    let element = a[index];
+
+    println!("The value of the element at index {index} is: {element}");
 }
