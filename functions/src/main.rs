@@ -1,6 +1,5 @@
 fn main() {
     let var: i32 = 5;
-    println!("Hello, world!");
     another_function(var, 'm');
     let result = explanitory();
     println!("We played with return values: {result}");
