@@ -37,3 +37,5 @@ fn move_a_box(b: Box<i32>) {
     let b2 = b;
     println!("{b2}");
 }
+
+/* bruh, references en pointers zijn best pittig. Misschien nog even een YT filmpje kijken. */
